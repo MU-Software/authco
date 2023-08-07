@@ -49,11 +49,11 @@ COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/pytho
 RUN set -eux; \
     mkdir -p /var/log/gunicorn; \
     mkdir -p /var/log/uvicorn; \
-    mkdir -p /var/log/snowfall;
+    mkdir -p /var/log/authco;
 
 # Make docker to always copy app directory so that source code can be refreshed.
 ARG INVALIDATE_CACHE_DATE=unknown
 RUN echo INVALIDATE_CACHE_DATE
 
 # Main App
-COPY ../app/ /app
+# COPY ../app/ /app
