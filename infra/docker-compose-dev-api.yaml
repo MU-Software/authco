@@ -6,7 +6,7 @@ services:
   authco-api-dev:
     build:
       context: ../
-      dockerfile: ./infra/Dockerfile
+      dockerfile: ./infra/DockerFile
       target: runtime
     container_name: authco-api-dev
     command:
